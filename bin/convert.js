@@ -8,7 +8,7 @@ const maxConvertProcesses = 1
 process.setMaxListeners(maxConvertProcesses + 1)
 
 const appPaths = () => {
-  const fileDir = path.dirname(require.main.filename).split('/')
+  const fileDir = path.dirname(require.main.filename).split(path.sep)
   // Remove current bin directory
   fileDir.pop()
   const appDir = fileDir.join('/')
